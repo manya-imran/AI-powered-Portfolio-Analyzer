@@ -1,0 +1,59 @@
+Backend
+portfolio_review -> configuration settings
+review -> review app files
+
+two apis-openai, voiceflow
+
+
+Run - python3 manage.py runserver
+
+Functionality
+
+domain -> screenshot -> send to openAI vision through voiceflow
+-> response -> feedback user
+
+Models Database -> for Functionality -> models.py
+1 screenshot
+2 domain
+3 feedback openAI
+4 feedback user
+
+Migrate those changes to database by
+python3 manage.py makemigrations #add Review model to database
+python3 manage.py migrate
+
+Next Take screenshot of url
+-> Define a function in view.py that does the job
+-> use Chrome driver to simulate a chrome browser
+
+Go to Visionflow clear OpenAI request Package
+
+Code that into the Django view.py
+Its has now a code to take screenshot and upload image and get url
+then use voiceflow api to get responses on uploaded url
+
+Now we add JavaScript in index.html to perform all of this on the the form in index.html
+Using JavaScript so user doesnt have to load a new page
+
+that JS first loads a loader 
+now uses a CSRF token to send method using CSRF token(in Django we use CSRF to send data using POST method)
+handle data and error
+
+Now in View.py
+Make sure only POST can access the submit-url function
+- Do this by require Http method - a decorator
+@require_http_methods(["POST])
+and basically just take domain perform screenshot and review send it back to index.html
+
+display the response in index.html
+
+Save the data to database i.e models 
+
+Now User Ratings
+add two functions to save the Ratings
+
+- add a ftn in view.py to update the user rating in db by review index
+
+Done
+
+
