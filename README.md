@@ -1,6 +1,6 @@
 ﻿# AI-powered-Portfolio-Analyzer
 
-A OpenAI Vision-powered application that uses a web interface to analyze a person's portfolio and analyze on the basis of positive and negative aspects. In the end it provides areas of improvement and maintains a database of inputs and get user's feedback on the resulting analysis.
+A OpenAI Vision-powered Django application that uses a web interface to analyze a person's portfolio and analyze on the basis of positive and negative aspects. In the end it provides areas of improvement and maintains a database of inputs and get user's feedback on the resulting analysis.
 
 For this you need to have
 - A VisionFlow account and API Key for creating Agents
